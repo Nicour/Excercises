@@ -23,7 +23,6 @@ class UserRepos extends Component {
     event.preventDefault();
     axios.get(`https://api.github.com/repos/${username}/${repository}/contributors`)
     .then (response => {
-      console.log("AAAAA")
       let contributors = [];
       response.data.forEach(contributor => {
         contributors.push({username: contributor.login, url: contributor.html_url})
