@@ -36,13 +36,6 @@ class UserRepos extends Component {
     });
   }
 
-  clearSearch = (event) => {
-    event.preventDefault();
-    this.setState({
-      contributors: []
-    })
-  }
-
   render() {
     const { repository, username, contributors } = this.state;
     return (
